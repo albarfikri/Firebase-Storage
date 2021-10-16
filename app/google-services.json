@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "501241935503",
+    "project_id": "fir-storage-db355",
+    "storage_bucket": "fir-storage-db355.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501241935503:android:cebc9cddbf85025b40a2fa",
+        "android_client_info": {
+          "package_name": "com.albar.firebasestorage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501241935503-5e7c5t4i373itt84bdmci08ev58f830v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnvKKGmkRQqtGh6sf0v3ZQsDhefqrCAzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501241935503-5e7c5t4i373itt84bdmci08ev58f830v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
