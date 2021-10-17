@@ -1,9 +1,9 @@
 package com.albar.firebasestorage
 
-import android.app.Activity
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.albar.firebasestorage.databinding.ActivityMainBinding
 
@@ -20,23 +20,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.ivImage.setOnClickListener() {
-            Intent(Intent.ACTION_GET_CONTENT).also {
-                it.type = "image/*"
-                startActivityForResult(it, REQUEST_CODE_IMAGE_PICK)
-            }
-        }
-    }
-
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_IMAGE_PICK) {
-            data?.data?.let {
-                curFile = it
+        val getImage = registerForActivityResult(
+            ActivityResultContracts.GetContent(),
+            ActivityResultCallback {
                 binding.ivImage.setImageURI(it)
             }
+        )
+
+        binding.ivImage.setOnClickListener() {
+            getImage.launch("image/*")
         }
     }
 }
