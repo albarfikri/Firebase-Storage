@@ -26,4 +26,14 @@
         app:layout_constraintStart_toStartOf="@+id/ivImage"
         app:layout_constraintTop_toBottomOf="@+id/ivImage" />
 
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/Download"
+        app:layout_constraintEnd_toEndOf="@+id/btnUpload"
+        app:layout_constraintStart_toStartOf="@+id/btnUpload"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

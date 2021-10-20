@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Firebase Storage</string>
     <string name="send">Uploading Image</string>
+    <string name="Download">Download</string>
 </resources>
