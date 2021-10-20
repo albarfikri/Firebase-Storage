@@ -16,24 +16,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/btnUpload"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:layout_width="51dp"
+        android:layout_height="44dp"
+        app:icon="@android:drawable/stat_sys_upload"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDownload"
+        app:layout_constraintEnd_toStartOf="@+id/btnDownload"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivImage"
+        app:layout_constraintTop_toTopOf="@+id/btnDownload" />
+
+    <Button
+        android:id="@+id/btnDownload"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/send"
+        android:layout_marginTop="16dp"
+        app:icon="@android:drawable/stat_sys_download"
         app:layout_constraintEnd_toEndOf="@+id/ivImage"
         app:layout_constraintStart_toStartOf="@+id/ivImage"
         app:layout_constraintTop_toBottomOf="@+id/ivImage" />
 
     <Button
-        android:id="@+id/btnDownload"
+        android:id="@+id/btnDelete"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/Download"
-        app:layout_constraintEnd_toEndOf="@+id/btnUpload"
-        app:layout_constraintStart_toStartOf="@+id/btnUpload"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+        app:icon="@android:drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDownload"
+        app:layout_constraintEnd_toEndOf="@+id/ivImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnDownload"
+        app:layout_constraintTop_toTopOf="@+id/btnDownload" />
 
+    <EditText
+        android:id="@+id/edtImageName"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:visibility="invisible"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/btnDelete"
+        app:layout_constraintStart_toStartOf="@+id/btnUpload"
+        app:layout_constraintTop_toBottomOf="@+id/btnDownload" />
 </androidx.constraintlayout.widget.ConstraintLayout>
